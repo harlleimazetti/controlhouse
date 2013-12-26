@@ -3,30 +3,242 @@
 <head> 
 	<title>Control House</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/jquery.mobile-1.3.2.min.css" />
     <link rel="stylesheet" href="css/controlhouse.css" />
 	<script src="js/jquery-1.9.1.min.js"></script>
 	<script src="js/jquery.mobile-1.3.2.min.js"></script>
-    <script src="js/javascripts.js"></script>
+<script src="js/javascripts.js"></script>
 <meta charset="utf-8">
 </head> 
 <body>
 
-<div data-role="page" id="index" data-theme="a">
+<div data-role="page" id="inicio" data-theme="a">
+	<div data-role="panel" data-position="left" id="painel_menu_principal" data-theme="f">
+		<ul class="nav-search" data-role="listview">
+	    	<li>
+	   	    	<p class="logo_painel"><img src="images/logo_controlhouse_hor.png" /></p>
+	        </li>
+	        <li>
+	        	<i class="icon-th-large icon-2x ico"></i>
+	            	<a href="#ambientes" data-transition="flip">
+	                	<h1>Ambientes</h1>
+	                    <p>Gerenciamento dos ambientes, permite acessar cada ambiente individualmente</p>
+	                </a>
+	        </li>
+	        <li>
+	        	<i class="icon-desktop icon-2x ico"></i>
+	            <a href="#cenarios" data-transition="flip">
+	            	<h1>Cenários</h1>
+	                <p>Gerenciamento dos cenários</p>
+	            </a>
+	        </li>
+	        <li>
+	        	<i class="icon-lightbulb icon-2x ico"></i>
+	            <a href="#ambientes" data-transition="flip">
+	            	<h1>Dispositivos</h1>
+	                <p>Gerenciamento dos dispositivos</p>
+	            </a>
+	        </li>
+	        <li>
+	        	<i class="icon-dashboard icon-2x ico"></i>
+	            <a href="#ambientes" data-transition="flip">
+	            	<h1>Informações</h1>
+	                <p>Gráficos de consumo, demonstrativos, relatórios</p>
+	            </a>
+	        </li>
+	        <li>
+	        	<i class="icon-gears icon-2x ico"></i>
+	            <a href="#ambientes" data-transition="flip">
+	            	<h1>Configurações</h1>
+	                <p>Administração das opções do sistema</p>
+	            </a>
+	        </li>
+	        <li>
+	        	<i class="icon-check icon-2x ico"></i>
+	            <a href="#ambientes" data-transition="flip">
+	            	<h1>Preferências</h1>
+	                <p>Ajustes pessoais</p>
+	            </a>
+	        </li>
+	        <li>
+	        	<i class="icon-remove icon-2x ico"></i>
+	        	<a href="logout.php" data-transition="flip">
+	            	<h1>Sair</h1>
+	                <p>Deixar o sistema</p>
+	            </a>
+	        </li>
+	    </ul>
+	</div><!-- /panel -->
+	<div data-role="header" data-theme="d">
+		<a href="#painel_menu_principal" data-role="none" style="text-decoration:none; color:#FFF; margin:3px"><i class="icon-reorder icon-2x icone_cabecalho"></i></a>
+    		<h1>Control House</h1>
+     		<a href="#painel_menu_principal" data-role="none" style="text-decoration:none; color:#FFF; margin:3px 15px 0 0;"><i class="icon-ellipsis-vertical icon-2x icone_cabecalho"></i></a>
+	</div><!-- /header -->
+	
 	<div data-role="content">
-    	<div id="logo">
-        	<img src="images/logo_controlhouse.png" width="160" height="113">
-        </div>
-        <div id="login">
-            <form name="form_login" id="form_login" action="login.php" data-ajax="false">
-                <label for="form_user" class="ui-hidden-accessible">Login:</label>
-                <input type="text" name="form_user" id="form_user" placeholder="Login" />
-                <label for="form_senha" class="ui-hidden-accessible">Senha:</label>
-                <input type="password" name="form_senha" id="form_senha" placeholder="Senha" />
-                <button type="submit">Acessar o sistema</button>
-            </form>
-        </div>
-    </div><!-- /content -->
+    
+	</div><!-- /content -->
+</div><!-- /page -->
+
+<div data-role="page" id="ambientes" data-theme="a">
+
+	<div data-role="panel" data-position="left" id="painel_menu_principal">
+		<ul class="nav-search" data-role="listview">
+	    	<li>
+	   	    	<p class="logo_painel"><img src="images/logo_controlhouse_hor.png" /></p>
+	        </li>
+	        <li>
+	        	<i class="icon-th-large icon-2x ico"></i>
+	            	<a href="#ambientes" data-transition="flip">
+	                	<h1>Ambientes</h1>
+	                    <p>Gerenciamento dos ambientes, permite acessar cada ambiente individualmente</p>
+	                </a>
+	        </li>
+	        <li>
+	        	<i class="icon-desktop icon-2x ico"></i>
+	            <a href="#cenarios" data-transition="flip">
+	            	<h1>Cenários</h1>
+	                <p>Gerenciamento dos cenários</p>
+	            </a>
+	        </li>
+	        <li>
+	        	<i class="icon-lightbulb icon-2x ico"></i>
+	            <a href="#ambientes" data-transition="flip">
+	            	<h1>Dispositivos</h1>
+	                <p>Gerenciamento dos dispositivos</p>
+	            </a>
+	        </li>
+	        <li>
+	        	<i class="icon-dashboard icon-2x ico"></i>
+	            <a href="#ambientes" data-transition="flip">
+	            	<h1>Informações</h1>
+	                <p>Gráficos de consumo, demonstrativos, relatórios</p>
+	            </a>
+	        </li>
+	        <li>
+	        	<i class="icon-gears icon-2x ico"></i>
+	            <a href="#ambientes" data-transition="flip">
+	            	<h1>Configurações</h1>
+	                <p>Administração das opções do sistema</p>
+	            </a>
+	        </li>
+	        <li>
+	        	<i class="icon-check icon-2x ico"></i>
+	            <a href="#ambientes" data-transition="flip">
+	            	<h1>Preferências</h1>
+	                <p>Ajustes pessoais</p>
+	            </a>
+	        </li>
+	        <li>
+	        	<i class="icon-remove icon-2x ico"></i>
+	        	<a href="logout.php" data-transition="flip">
+	            	<h1>Sair</h1>
+	                <p>Deixar o sistema</p>
+	            </a>
+	        </li>
+	    </ul>
+	</div><!-- /panel -->
+	<div data-role="header" data-theme="d">
+		<a href="#painel_menu_principal" data-role="none" style="text-decoration:none; color:#FFF; margin:3px"><i class="icon-reorder icon-2x icone_cabecalho"></i></a>
+    		<h1>Control House</h1>
+     		<a href="#painel_menu_principal" data-role="none" style="text-decoration:none; color:#FFF; margin:3px 15px 0 0;"><i class="icon-ellipsis-vertical icon-2x icone_cabecalho"></i></a>
+	</div><!-- /header -->
+
+	<div data-role="content">
+		<h2>Ambientes</h2>
+		<ul data-role="listview" data-inset="true">
+			<li class="ambiente" value="Ambiente 1"><a href="#" data-transition="flip">Ambiente 1</a></li>
+			<li class="ambiente" value="Ambiente 2"><a href="#" data-transition="flip">Ambiente 2</a></li>
+			<li class="ambiente" value="Ambiente 3"><a href="#" data-transition="flip">Ambiente 3</a></li>
+			<li class="ambiente" value="Ambiente 4"><a href="#" data-transition="flip">Ambiente 4</a></li>
+			<li class="ambiente" value="Ambiente 5"><a href="#" data-transition="flip">Ambiente 51</a></li>
+			<li class="ambiente" value="Ambiente 6"><a href="#" data-transition="flip">Ambiente 6</a></li>
+			<li class="ambiente" value="Ambiente 7"><a href="#" data-transition="flip">Ambiente 7</a></li>
+			<li class="ambiente" value="Ambiente 8"><a href="#" data-transition="flip">Ambiente 8</a></li>
+			<li class="ambiente" value="Ambiente 9"><a href="#" data-transition="flip">Ambiente 9</a></li>
+			<li class="ambiente" value="Ambiente 10"><a href="#" data-transition="flip">Ambiente 10</a></li>
+		</ul>
+	</div><!-- /content -->
+
+
+</div><!-- /page -->
+
+<div data-role="page" id="cenarios" data-theme="a">
+
+	<div data-role="panel" data-position="left" id="painel_menu_principal" data-theme="f">
+		<ul class="nav-search" data-role="listview">
+	    	<li>
+	   	    	<p class="logo_painel"><img src="images/logo_controlhouse_hor.png" /></p>
+	        </li>
+	        <li>
+	        	<i class="icon-th-large icon-2x ico"></i>
+	            	<a href="#ambientes" data-transition="flip">
+	                	<h1>Ambientes</h1>
+	                    <p>Gerenciamento dos ambientes, permite acessar cada ambiente individualmente</p>
+	                </a>
+	        </li>
+	        <li>
+	        	<i class="icon-desktop icon-2x ico"></i>
+	            <a href="#cenarios" data-transition="flip">
+	            	<h1>Cenários</h1>
+	                <p>Gerenciamento dos cenários</p>
+	            </a>
+	        </li>
+	        <li>
+	        	<i class="icon-lightbulb icon-2x ico"></i>
+	            <a href="#ambientes" data-transition="flip">
+	            	<h1>Dispositivos</h1>
+	                <p>Gerenciamento dos dispositivos</p>
+	            </a>
+	        </li>
+	        <li>
+	        	<i class="icon-dashboard icon-2x ico"></i>
+	            <a href="#ambientes" data-transition="flip">
+	            	<h1>Informações</h1>
+	                <p>Gráficos de consumo, demonstrativos, relatórios</p>
+	            </a>
+	        </li>
+	        <li>
+	        	<i class="icon-gears icon-2x ico"></i>
+	            <a href="#ambientes" data-transition="flip">
+	            	<h1>Configurações</h1>
+	                <p>Administração das opções do sistema</p>
+	            </a>
+	        </li>
+	        <li>
+	        	<i class="icon-check icon-2x ico"></i>
+	            <a href="#ambientes" data-transition="flip">
+	            	<h1>Preferências</h1>
+	                <p>Ajustes pessoais</p>
+	            </a>
+	        </li>
+	        <li>
+	        	<i class="icon-remove icon-2x ico"></i>
+	        	<a href="logout.php" data-transition="flip">
+	            	<h1>Sair</h1>
+	                <p>Deixar o sistema</p>
+	            </a>
+	        </li>
+	    </ul>
+	</div><!-- /panel -->
+	<div data-role="header" data-theme="d">
+		<a href="#painel_menu_principal" data-role="none" style="text-decoration:none; color:#FFF; margin:3px"><i class="icon-reorder icon-2x icone_cabecalho"></i></a>
+    		<h1>Control House</h1>
+     		<a href="#painel_menu_principal" data-role="none" style="text-decoration:none; color:#FFF; margin:3px 15px 0 0;"><i class="icon-ellipsis-vertical icon-2x icone_cabecalho"></i></a>
+	</div><!-- /header -->
+	
+	<div data-role="content">
+		<h2>Cenários</h2>
+		<ul data-role="listview" data-inset="true">
+			<li class="cenario" value="Cenario 1"><a href="#">Cenario 1</a></li>
+			<li class="cenario" value="Cenario 2"><a href="#">Cenario 2</a></li>
+			<li class="cenario" value="Cenario 3"><a href="#">Cenario 3</a></li>
+			<li class="cenario" value="Cenario 4"><a href="#">Cenario 4</a></li>
+			<li class="cenario" value="Cenario 5"><a href="#">Cenario 5</a></li>
+		</ul>
+	</div><!-- /content -->
 </div><!-- /page -->
 
 </body>
