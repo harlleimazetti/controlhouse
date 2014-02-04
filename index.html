@@ -91,13 +91,38 @@
     }
 
     </script>
-  </head>
-  <body>
-    <button onclick="capturePhoto();">Capture Photo</button> <br>
-    <button onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
-    <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
-    <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
-    <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
-    <img style="display:none;" id="largeImage" src="" />
+    
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/jquery.mobile-1.3.2.min.js"></script>
+    
+    <link rel="stylesheet" href="css/jquery.mobile-1.3.2.min.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.structure-1.3.2.min.css" />
+    
+</head>
+<body>
+  
+	<div data-role="page" id="dispositivo_form" data-theme="a">
+		<div data-role="content">
+    	
+        	<label for="data" class="ui-hidden-accessible">Data:</label>
+			<input type="text" name="data" id="data" value="" placeholder="Data">
+            
+        	<label for="hora" class="ui-hidden-accessible">Hora:</label>
+			<input type="text" name="hora" id="hora" value="" placeholder="Hora">
+            
+        	<label for="nome" class="ui-hidden-accessible">Nome do Perito:</label>
+			<input type="text" name="nome" id="nome" value="" placeholder="Nome do Perito">
+            
+        	<label for="descricao" class="ui-hidden-accessible">Descrição:</label>
+			<input type="text" name="descricao" id="descricao" value="" placeholder="descricao">            
+
+            <button onclick="capturePhoto();">Capture Photo</button> <br>
+            
+            <img style="display:none;width:320px;height:320px;" id="smallImage" src="" />
+            <img style="display:none;" id="largeImage" src="" />
+            
+	</div><!-- /content -->
+</div><!-- /page -->
+
   </body>
 </html>
